@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F8F8F8">
+
+    <!-- Khu vực nhập số tiền nguồn -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtSymbolFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:paddingEnd="8dp" />
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:textSize="40sp"
+            android:hint="0"
+            android:textStyle="bold"
+            android:background="@null" />
+    </LinearLayout>
+
+    <!-- Chọn loại tiền nguồn -->
+    <Spinner
+        android:id="@+id/spinnerFrom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:paddingTop="8dp"
+        android:textSize="16sp" />
+
+    <!-- Khu vực nhập số tiền đích -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/txtSymbolTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₫"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:paddingEnd="8dp" />
+
+        <TextView
+            android:id="@+id/txtConvertedAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Chọn loại tiền đích -->
+    <Spinner
+        android:id="@+id/spinnerTo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:paddingTop="8dp"
+        android:textSize="16sp" />
+
+    <!-- Tỷ giá hối đoái -->
+    <TextView
+        android:id="@+id/txtExchangeRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 USD = 23,185.00 VND"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:textColor="#666666"/>
+</LinearLayout>
